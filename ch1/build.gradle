@@ -1,0 +1,22 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+}
+
+group = 'honux'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.strikt:strikt-core:0.34.0'
+    testImplementation "org.jetbrains.kotlin:kotlin-test:2.1.10"
+}
+
+test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(21)
+}
