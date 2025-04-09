@@ -38,4 +38,19 @@ class AdditionTest {
             expectThat((x + y) + z).isEqualTo(x + (y + z))
         }
     }
+
+    @Test
+    fun `연1-3 1씩 더해가는 테스트`() {
+        repeat(100) {
+            val a = randomNatural()
+            val b = randomNatural()
+            val min = minOf(a, b)
+            val max = maxOf(a, b)
+            var count = min
+            while (count < max) {
+                count++
+            }
+            expectThat(count).isEqualTo(max)
+        }
+    }
 }
